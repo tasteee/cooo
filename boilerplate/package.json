@@ -1,0 +1,17 @@
+{
+	"name": "__NAME__",
+	"type": "module",
+	"version": "0.0.0",
+	"private": true,
+	"scripts": {
+		"start": "clo start",
+		"build": "clo build"
+	},
+	"dependencies": {
+		"react": "latest",
+		"react-dom": "latest"
+	},
+	"clo": {
+		"name": "__NAME__"
+	}
+}

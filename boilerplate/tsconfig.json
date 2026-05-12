@@ -1,0 +1,12 @@
+{
+	"compilerOptions": {
+		"target": "esnext",
+		"lib": ["dom", "es2023"],
+		"module": "preserve",
+		"moduleResolution": "bundler",
+		"jsx": "react-jsx",
+		"strict": true,
+		"skipLibCheck": true
+	},
+	"include": ["src"]
+}

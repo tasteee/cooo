@@ -1,0 +1,65 @@
+{
+	"name": "@clo/cli",
+	"type": "module",
+	"version": "0.0.0",
+	"description": "A starter for creating a TypeScript package.",
+	"author": "Author Name <author.name@mail.com>",
+	"license": "MIT",
+	"bin": {
+		"clo": "bin/clo.js"
+	},
+	"scripts": {
+		"build": "tsdown",
+		"dev": "tsdown --watch",
+		"test": "vitest run",
+		"typecheck": "tsc --noEmit",
+		"release": "bumpp",
+		"prepublishOnly": "pnpm run build"
+	},
+	"devDependencies": {
+		"@types/node": "^25.6.2",
+		"@types/signale": "^1.4.7",
+		"@typescript/native-preview": "7.0.0-dev.20260509.2",
+		"bumpp": "^11.1.0",
+		"tsdown": "^0.22.0",
+		"typescript": "^6.0.3",
+		"vitest": "^4.1.5"
+	},
+	"dependencies": {
+		"@babel/core": "^7.28.5",
+		"@babel/preset-env": "^7.28.5",
+		"@babel/preset-react": "^7.28.5",
+		"@babel/preset-typescript": "^7.28.5",
+		"babel-loader": "^10.0.0",
+		"cac": "^7.0.0",
+		"css-loader": "^7.1.2",
+		"dotenv": "^17.4.2",
+		"html-webpack-plugin": "^5.6.7",
+		"jiti": "^2.6.1",
+		"pkg-up": "^5.0.0",
+		"postcss-loader": "^8.2.0",
+		"postcss-preset-env": "^10.5.0",
+		"signale": "^1.4.0",
+		"source-map-loader": "^5.0.0",
+		"style-loader": "^4.0.0",
+		"webpack": "^5.106.2",
+		"webpack-dev-server": "^5.2.2"
+	},
+	"exports": {
+		".": "./dist/index.mjs",
+		"./package.json": "./package.json"
+	},
+	"files": [
+		"bin",
+		"boilerplate",
+		"dist"
+	],
+	"homepage": "https://github.com/author/library#readme",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/author/library.git"
+	},
+	"bugs": {
+		"url": "https://github.com/author/library/issues"
+	}
+}
