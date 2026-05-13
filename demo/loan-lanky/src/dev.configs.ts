@@ -1,8 +1,8 @@
 export default [
 	{
-		name: "loan-link",
-		label: "loan-link",
-		basePath: "/loan-link",
+		name: "loan-lanky",
+		label: "loan-lanky",
+		basePath: "/loan-lanky",
 		entry: "./main.tsx",
 		isEnabled: true,
 		framework: "react"

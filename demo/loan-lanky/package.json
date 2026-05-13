@@ -1,5 +1,5 @@
 {
-	"name": "__NAME__",
+	"name": "loan-lanky",
 	"type": "module",
 	"version": "0.0.0",
 	"private": true,
@@ -8,11 +8,13 @@
 		"build": "clo build"
 	},
 	"dependencies": {
-		"react": "latest",
-		"react-dom": "latest",
-		"wouter": "latest"
+		"react": "latest"
 	},
 	"clo": {
-		"name": "__NAME__"
+		"name": "loan-lanky"
+	},
+	"devDependencies": {
+		"react-dom": "latest",
+		"wouter": "latest"
 	}
 }

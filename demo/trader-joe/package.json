@@ -1,5 +1,5 @@
 {
-	"name": "loan-link",
+	"name": "trader-joe",
 	"type": "module",
 	"version": "0.0.0",
 	"private": true,
@@ -7,11 +7,12 @@
 		"start": "clo start",
 		"build": "clo build"
 	},
-	"dependencies": {
-		"react": "latest",
-		"react-dom": "latest"
-	},
 	"clo": {
-		"name": "loan-link"
+		"name": "trader-joe"
+	},
+	"devDependencies": {
+		"react": "latest",
+		"react-dom": "latest",
+		"wouter": "latest"
 	}
 }

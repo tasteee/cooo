@@ -127,7 +127,7 @@ export const loadScriptingContext = async (command: ScriptingContextT["command"]
 	const isEntryMissing = !doesEntryExist
 	const entryConfigurationKey = isStartCommand ? "developmentEntry" : "entry"
 
-	if (isEntryMissing) {
+	if (isEntryMissing && !isStartCommand) {
 		const errorMessage = getMissingEntryErrorMessage(command, entry, entryConfigurationKey)
 		throw new Error(errorMessage)
 	}
@@ -145,4 +145,25 @@ export const loadScriptingContext = async (command: ScriptingContextT["command"]
 		exposes: productConfiguration.exposes,
 		port: productConfiguration.port
 	}
+}
+
+export const loadDevelopmentConfigurations = async (
+	context: ScriptingContextT,
+	shellPort: number
+): Promise<MfeDevConfigT[]> => {
+	const devConfigsPath = context.developmentConfigurationsPath
+
+	if (!devConfigsPath) return []
+
+	const rawConfigs = await configurationImporter.import(devConfigsPath, { default: true })
+	const configs = rawConfigs as CloProductConfigT[]
+	const enabledConfigs = configs.filter((config) => {
+		return config.isEnabled
+	})
+
+	return enabledConfigs.map((config, index) => {
+		const port = shellPort + 1 + index
+		const remoteUrl = `http://localhost:${port}/remoteEntry.js`
+		return { ...config, port, remoteUrl }
+	})
 }

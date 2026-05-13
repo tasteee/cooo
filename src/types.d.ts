@@ -26,11 +26,16 @@ type CloConfigurationT = Partial<
 	>
 >
 
-type CloDevelopmentConfigurationT = {
+type CloProductConfigT = {
 	name: string
 	isEnabled: boolean
 	framework: "react"
 	label: string
 	basePath: string
 	entry: string
+}
+
+type MfeDevConfigT = CloProductConfigT & {
+	port: number
+	remoteUrl: string
 }

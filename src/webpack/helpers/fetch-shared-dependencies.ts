@@ -11,11 +11,11 @@ export const fetchSharedDependencies = async () => {
 	return {
 		react: {
 			singleton: true,
-			requiredVersion: "^18.0.0"
+			requiredVersion: "^19.0.0"
 		},
 		"react-dom": {
 			singleton: true,
-			requiredVersion: "^18.0.0"
+			requiredVersion: "^19.0.0"
 		},
 		xoid: {
 			singleton: true,

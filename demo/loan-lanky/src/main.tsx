@@ -1,5 +1,5 @@
 export const Main = () => {
-	return <main>loan-link</main>
+	return <main>loan-lanky</main>
 }
 
 export default Main
